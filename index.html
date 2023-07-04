@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <input type="text" id="one"><br><br>
+    <input type="text" id="two"><br><br>
+    <input type="text" id="three" value="output"><br><br>
+    <!-- <h1 id="three">Output here</h1> -->
+    <button onclick="calculate('ADD')">+</button>
+    <button onclick="calculate('SUB')">-</button>
+    <button onclick="calculate('MUL')">*</button>
+    <button onclick="calculate('DIV')">/</button>
+
+    <script>
+        
+        function calculate(arg) {
+            const one = +document.querySelector("#one").value               //converting string into int by using +
+            const two = parseInt(document.querySelector("#two").value)  //converting string into int by using parseInt
+            // console.log(one.value);
+            // console.log(one.value,two.value);
+            // const c= one + two
+            if(arg === "ADD"){
+                document.getElementById("three").value=one+two
+            }
+            else if(arg ==="SUB"){
+                document.getElementById("three").value=one-two
+            }
+            else if(arg ==="MUL"){
+                document.getElementById("three").value=one*two
+            }
+            else if(arg ==="DIV"){
+                document.getElementById("three").value=one/two
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
